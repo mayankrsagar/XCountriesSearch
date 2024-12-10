@@ -1,0 +1,16 @@
+.searchBar{
+    background-color: #eee0e0;
+    height: 3rem;
+    margin: 0;
+    display: flex;
+    /* padding: 3rem; */
+    justify-content: center;
+    align-items: center;
+}
+.countriesDisplay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
