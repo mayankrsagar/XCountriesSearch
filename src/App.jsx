@@ -19,13 +19,14 @@ function App() {
       try {
         const response = await axios.get("https://restcountries.com/v3.1/all");
         setCountry(response.data);
-        setFilterCountry(response.data); 
+        setFilterCountry(response.data);
       } catch (error) {
         console.error(error);
       }
     };
 
-    fetchCountries();
+    // Delay the API call to allow Cypress intercepts to be registered
+    setTimeout(fetchCountries, 1000);
   }, []);
 
   return (
@@ -35,5 +36,4 @@ function App() {
   );
 }
 
-
-export default App
+export default App;
